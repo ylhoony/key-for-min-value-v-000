@@ -4,12 +4,12 @@
 def key_for_min_value(name_hash)
   min = []
   name_hash.each do |k, v|
-    if min.empty?
+    if min.empty? || min[1] > v
       min[0] = k
       min[1] = v
-    elsif min[1] > v
-      min[0] = k
-      min[1] = v
+    # elsif 
+    #   min[0] = k
+    #   min[1] = v
     end
   end
   min[0]
